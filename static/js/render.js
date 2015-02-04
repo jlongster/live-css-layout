@@ -63,7 +63,10 @@ function render(nodeStr) {
 }
 
 function renderNode(n) {
-  ctx.fillStyle = 'rgb(' + (Math.random() * 255 | 0) + ',' + (Math.random() * 255 | 0) + ',0)';
+  ctx.fillStyle = ('rgb(' +
+                   (Math.random() * 255 | 0) + ',' +
+                   (Math.random() * 255 | 0) + ',' +
+                   (Math.random() * 255 | 0) + ')');
   ctx.fillRect(n.layout.left,
                n.layout.top,
                n.layout.width,
