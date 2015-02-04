@@ -1,2 +1,2 @@
 
-A simple live editor for [https://github.com/facebook/css-layout](css-layout).
+A simple live editor for [css-layout](https://github.com/facebook/css-layout).
