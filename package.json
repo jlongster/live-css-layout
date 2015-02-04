@@ -1,0 +1,14 @@
+{
+  "name": "native-web",
+  "dependencies": {
+    "6to5": "^3.3.7",
+    "6to5-core": "^3.3.7",
+    "6to5-loader": "^3.0.0",
+    "css-loader": "^0.9.1",
+    "extract-text-webpack-plugin": "^0.3.8",
+    "less": "^2.3.1",
+    "less-loader": "^2.0.0",
+    "style-loader": "^0.8.3",
+    "webpack": "^1.5.3"
+  }
+}
