@@ -32,7 +32,7 @@ body {
     height: auto;
 }
 
-#run {
+button {
     margin: 1em;
     font-size: 1em;
     border: 0;
@@ -44,7 +44,34 @@ body {
     z-index: 1000;
 }
 
+#run {
+    top: 0;
+    right: 0;
+}
+
 #run:active {
     top: 2px;
     right: -1px;
+}
+
+#benchmark {
+    top: 35px;
+    right: 0;
+}
+
+#benchmark:active {
+    top: 37px;
+    right: -1px;
+}
+
+#benchmarkResult {
+    color: #ddd;
+    margin: 1em;
+    font-size: 1em;
+    font-family: Helvetica, Arial, sans-serif;
+    position: absolute;
+    padding: .25em .5em;
+    top: 65px;
+    right: 0;
+    z-index: 1000;
 }
