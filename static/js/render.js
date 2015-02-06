@@ -33,6 +33,18 @@ function computeLayout(n) {
   return n;
 }
 
+function benchmarkLayout(n, numLoops) {
+  fillNodes(n);
+  
+  let startTime = window.performance.now();
+  for (var i = 0; i < numLoops; i++) {
+    _computeLayout(n);  
+  }
+  let duration = window.performance.now() - startTime;
+  
+  return duration;
+}
+
 function resize() {
   let rect = canvas.parentNode.getBoundingClientRect();
   canvas.width = rect.width;
@@ -74,6 +86,18 @@ function renderNode(n) {
   n.children.forEach(renderNode);
 }
 
+function benchmark(nodeStr, numLoops) {
+  if(!nodeStr.match(/^\s*node\(.*\)\s*$/m)) {
+    return;
+  }
+  let n = eval(nodeStr);
+  if(n && typeof n === 'object') {
+    return benchmarkLayout(wrapNode(n), numLoops);
+  }
+
+  return -1;
+}
+
 function start(_canvas) {
   canvas = _canvas;
   ctx = canvas.getContext('2d');
@@ -85,5 +109,6 @@ function start(_canvas) {
 module.exports = {
   start: start,
   resize: resize,
-  render: render
+  render: render,
+  benchmark: benchmark
 };
